@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.lifeassisttech.cordova.core.PhoneGapSpeechPlugin"
+    version="0.1.0">
+
+    <name>PhoneGapSpeechPlugin</name>
+    <description>Nuance Speech Kit for Phonegap</description>
+    <license>Apache 2.0</license>
+    <keywords>nuance,Speech</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="PhoneGapSpeechPlugin">
+                <param name="ios-package" value="PhoneGapSpeechPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <js-module src="www/PhoneGapSpeechPlugin.js" name="PhoneGapSpeechPlugin">
+            <clobbers target="PhoneGapSpeechPlugin" />
+        </js-module>
+
+        <header-file src="ios/PhoneGapSpeechPlugin.h" />
+        <source-file src="ios/PhoneGapSpeechPlugin.m" />        
+    </platform>
+</plugin>
